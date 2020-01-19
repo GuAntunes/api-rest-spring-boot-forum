@@ -47,6 +47,9 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 		http.authorizeRequests()
 		.antMatchers(HttpMethod.GET, "/topicos").permitAll()
 		.antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
+		//Não é recomendado deixar o actuator aberto com permitAll,
+		//apenas deixamos assim para fins de teste
+		.antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
 		.antMatchers(HttpMethod.POST, "/auth").permitAll()
 		.anyRequest().authenticated()
 		.and().csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -57,8 +60,8 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 	//Configurações de recursos estaticos, css, imagens, javascript
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-		// TODO Auto-generated method stub
-		super.configure(web);
+		 web.ignoring()
+	        .antMatchers("/**.html", "/v2/api-docs", "/webjars/**", "/configuration/**", "/swagger-resources/**");
 	}
 	
 //	public static void main(String[] args) {
