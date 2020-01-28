@@ -1,0 +1,325 @@
+{
+	"id": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+	"name": "api-rest-spring-boot-forum",
+	"description": "Chamadas para a aplicação API Rest Spring Boot Forum",
+	"order": [
+		"ba37a126-f624-8537-1d95-6b51a436ff75",
+		"1e3af6e4-7933-4df3-3ef6-13d395c413f9",
+		"4d414599-b025-497e-1ea4-9dd5c59182fd",
+		"0cc7554e-0bb0-5e7e-0c1a-c3e94009958a",
+		"3c0e9de7-b605-01e2-1b93-466caabacf92",
+		"762ea593-7cff-96a3-98e0-eaf01784028e",
+		"99d4bafb-0978-d308-49d3-f103c0546048",
+		"3bf52e29-4627-8f64-97cf-44151e617401"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1579087105575,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "0cc7554e-0bb0-5e7e-0c1a-c3e94009958a",
+			"headers": "Content-Type: application/json\nAccept-Language: pt-br\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "pt-br",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/topicos",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579301116642,
+			"name": "Cadastrar Topico",
+			"description": "",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"responses": [],
+			"rawModeData": "{\n\t\"titulo\":\"Criado\",\n\t\"mensagem\":\"Texto Mensagem Criado\",\n\t\"nomeCurso\":\"Spring Boot\"\n}"
+		},
+		{
+			"id": "1e3af6e4-7933-4df3-3ef6-13d395c413f9",
+			"headers": "Content-Type: application/json\nAccept-Language: pt-br\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "pt-br",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/topicos/3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579087906394,
+			"name": "Detalhar Tópico",
+			"description": "",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"responses": [],
+			"rawModeData": "{\n\t\"titulo\":\"Atualizado\",\n\t\"mensagem\":\"Texto Mensagem Atualizado\",\n\t\"nomeCurso\":\"\"\n}"
+		},
+		{
+			"id": "3bf52e29-4627-8f64-97cf-44151e617401",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/actuator",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"data": null,
+			"dataMode": "params",
+			"name": "Actuator",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1579456075440,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "3c0e9de7-b605-01e2-1b93-466caabacf92",
+			"headers": "Content-Type: application/json\nAccept-Language: pt-br\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "pt-br",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/topicos/3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579087912701,
+			"name": "Atualizar Topico",
+			"description": "",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"responses": [],
+			"rawModeData": "{\n\t\"titulo\":\"Atualizado\",\n\t\"mensagem\":\"Texto Mensagem Atualizado\"\n}"
+		},
+		{
+			"id": "4d414599-b025-497e-1ea4-9dd5c59182fd",
+			"headers": "Content-Type: application/json\nAccept-Language: pt-br\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "pt-br",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/topicos?page=0&size=10&sort=id,asc&sort=dataCriacao,desc",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "id,asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sort",
+					"value": "dataCriacao,desc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579087237466,
+			"name": "Lista de Tópicos Paginadas",
+			"description": "",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"responses": [],
+			"rawModeData": "{\n\t\"titulo\":\"Atualizado\",\n\t\"mensagem\":\"Texto Mensagem Atualizado\",\n\t\"nomeCurso\":\"\"\n}"
+		},
+		{
+			"id": "762ea593-7cff-96a3-98e0-eaf01784028e",
+			"headers": "Content-Type: application/json\nAccept-Language: pt-br\nAuthorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgRsOzcnVtIGRvIEd1c3Rhdm8iLCJzdWIiOiIxIiwiaWF0IjoxNTc5NDU0MTExLCJleHAiOjE1Nzk1NDA1MTF9.Mn_3YTLPkU1MlCpHWEdFUR-7Nm7Ia2Ty3wyVBjwZxEQ\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "pt-br",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBUEkgRsOzcnVtIGRvIEd1c3Rhdm8iLCJzdWIiOiIxIiwiaWF0IjoxNTc5NDU0MTExLCJleHAiOjE1Nzk1NDA1MTF9.Mn_3YTLPkU1MlCpHWEdFUR-7Nm7Ia2Ty3wyVBjwZxEQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/topicos/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579455527280,
+			"name": "Deletar Topico",
+			"description": "",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "99d4bafb-0978-d308-49d3-f103c0546048",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/auth",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579450980665,
+			"name": "Autenticação JWT",
+			"description": "",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\" : \"aluno@email.com\",\n\t\"senha\" : \"123456\"\n}"
+		},
+		{
+			"id": "ba37a126-f624-8537-1d95-6b51a436ff75",
+			"headers": "Content-Type: application/json\nAccept-Language: pt-br\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "pt-br",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/topicos",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579301145929,
+			"name": "Lista de Tópicos",
+			"description": "",
+			"collectionId": "dcf48931-e2d7-3b91-2bd5-b5aa44e37f52",
+			"responses": [],
+			"rawModeData": ""
+		}
+	]
+}
