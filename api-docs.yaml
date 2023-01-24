@@ -1,0 +1,143 @@
+openapi: 3.0.1
+info:
+  title: Buy Now Pay Later API
+  description: "\n                Buy Now Pay Later API is responsible to provide\
+    \ integration between ab-inbev and partners \n                "
+  contact:
+    name: BEES Constact
+    url: https://www.bees.com/pt/contact/
+    email: contato@bees.com
+  license:
+    name: MIT Licence
+    url: https://github.com/thombergs/code-examples/blob/master/LICENSE
+  version: "123"
+servers:
+- url: http://localhost:8080
+paths:
+  /customer:
+    post:
+      tags:
+      - customer-resource
+      operationId: createCustomer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCustomerInput'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Customer'
+  /customer/{document}:
+    get:
+      tags:
+      - customer-resource
+      summary: Get a Customer from document
+      description: Returns a Customer
+      operationId: findCustomerByDocument
+      parameters:
+      - name: document
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "404":
+          description: Such a customer does not exist
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Customer'
+        "200":
+          description: Successful Operation
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Customer'
+  /customer/address/{state}:
+    get:
+      tags:
+      - customer-resource
+      operationId: findCustomerByAddressState
+      parameters:
+      - name: state
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Customer'
+components:
+  schemas:
+    CreateCustomerInput:
+      required:
+      - addresses
+      - document
+      type: object
+      properties:
+        document:
+          type: string
+        addresses:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerAddress'
+    CustomerAddress:
+      required:
+      - city
+      - neighborhood
+      - number
+      - state
+      - street
+      - zipCode
+      type: object
+      properties:
+        zipCode:
+          type: string
+        street:
+          type: string
+        complement:
+          type: string
+        number:
+          maximum: 100000
+          minimum: 1
+          type: integer
+          description: A number of the address
+          format: int32
+          example: 123
+        neighborhood:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+    Customer:
+      required:
+      - document
+      - id
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        document:
+          type: string
+          description: Customer document
+          example: "12345678909"
+        addresses:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerAddress'
+      description: "Model for a Customer, represent one client from BEES."
